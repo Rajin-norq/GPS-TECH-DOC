@@ -1,4 +1,5 @@
-name: Build Sphinx Docson:
+name: Build Sphinx Docs
+on:
   push:
     branches:
       - main
