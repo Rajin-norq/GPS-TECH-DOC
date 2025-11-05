@@ -1,5 +1,4 @@
-name: Build Sphinx Docs
-on:
+name: Build Sphinx Docson:
   push:
     branches:
       - main
@@ -24,9 +23,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install sphinx sphinx-rtd-theme sphinx-autodoc-typehints
-
-      - name: Generate RST files
-        run: sphinx-apidoc -o docs/source gps_norq --force
 
       - name: Build HTML documentation
         run: sphinx-build -b html docs/source docs/build/html
