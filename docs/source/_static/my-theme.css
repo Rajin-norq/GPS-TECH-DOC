@@ -1,0 +1,9 @@
+.wy-nav-content {
+  max-width: 100% !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+}
+
+.rst-content {
+  max-width: 100% !important;
+}
