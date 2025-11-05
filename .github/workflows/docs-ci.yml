@@ -1,4 +1,4 @@
-name: Build Sphinx Docs
+name: Deploy GPS Tech Documentation
 on:
   push:
     branches:
