@@ -35,32 +35,20 @@
 
     * If backend send success response, frontend perform as below
         * Displays the success message as an auto-dismissible toast message
-        * Close the popup model.
 
 
 **API:**
 
     .. note::
 
-        This api is only accessible for client employee or paid user only.
+        This api is only accessible for super admin only.
     
 
-    * End Point: api/v1/email-support
-    * Method: POST
+    * End Point: api/v1/gps/subscription
+    * Method: GET
     * Default Header: application/json 
     * Auth Header: JWT token
-    * Payload:
-
-        .. code-block:: text
-
-            {
-                first_name: string,         // optional
-                last_name: string,          // optional
-                email: string,              // required, valid email format
-                contact_number: string,     // optional, valid phone number format
-                subject: string,            // required
-                body: string,               // required
-            }
+    
 
 
     * Success Response:
@@ -69,7 +57,7 @@
 
             {
                 status: 'success',
-                status_code: 'S-10026',
+                status_code: 'S-10...',
             }
 
 
