@@ -70,22 +70,112 @@
                             price: number,
                             currency: string,
                             status: string,
-                            features: [   
-                                {
-                                    _id:ObjectId,
-                                    type: string,           
-                                    is_enabled: boolean,    
-                                    is_enable_controls: boolean,
-                                    controls :{
-                                        max_creation_limit: number,  
-                                        duration: string,
-                                        time_limit: string,      
-                                        edit: boolean,
-                                        max_assigning_limit: number,
-                                    }
-                                  
-                                }
-                            ],
+                            features: {
+                                driver: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                vehicle: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                reports: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                        duration: string;
+                                        timeLimit: string;
+                                    };
+                                };
+                                eventRule: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                        duration: string;
+                                        timeLimit: string;
+                                    };
+                                };
+                                dashboard: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        duration: string;
+                                        timeLimit: string;
+                                    };
+                                };
+                                geoFence: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                geoFenceGroup: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                poi: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                poiCategory: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                deviceMapper: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        edit: boolean;
+                                    };
+                                };
+                                users: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                tags: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                        maxAssigningLimit: number;
+                                    };
+                                };
+                                rolesAndPrivileges: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                                apiSharing: {
+                                    enabled: boolean;
+                                    enableControls: boolean;
+                                    controls: {
+                                        maxCreationLimit: number;
+                                    };
+                                };
+                            };
                         },
                     ]
                     current_page: number,
@@ -240,18 +330,112 @@
                 price: number,   // required
                 currency: string, // required
                 status: string,   // required   
-                features: [
-                    {
-                        type: string,           // required - enum(1.3)
-                        is_enabled: boolean,    
-                        is_enable_controls: boolean,
-                        max_creation_limit: number,  
-                        duration: string,
-                        time_limit: string,      
-                        edit: boolean,
-                        max_assigning_limit: number,
-                    }
-                ],
+                features: {
+                    driver: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    vehicle: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    reports: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                            duration: string;
+                            timeLimit: string;
+                        };
+                    };
+                    eventRule: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                            duration: string;
+                            timeLimit: string;
+                        };
+                    };
+                    dashboard: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            duration: string;
+                            timeLimit: string;
+                        };
+                    };
+                    geoFence: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    geoFenceGroup: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    poi: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    poiCategory: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    deviceMapper: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            edit: boolean;
+                        };
+                    };
+                    users: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    tags: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                            maxAssigningLimit: number;
+                        };
+                    };
+                    rolesAndPrivileges: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    apiSharing: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                };
             }
 
 
@@ -414,18 +598,112 @@
                 price: number,   // required
                 currency: string, // required
                 status: string,   // required   
-                features: [
-                    {
-                        type: string,           // required - enum(1.3)
-                        is_enabled: boolean,    
-                        is_enable_controls: boolean,
-                        max_creation_limit: number,  
-                        duration: string,
-                        time_limit: string,      
-                        edit: boolean,
-                        max_assigning_limit: number,
-                    }
-                ],
+                features: {
+                    driver: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    vehicle: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    reports: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                            duration: string;
+                            timeLimit: string;
+                        };
+                    };
+                    eventRule: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                            duration: string;
+                            timeLimit: string;
+                        };
+                    };
+                    dashboard: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            duration: string;
+                            timeLimit: string;
+                        };
+                    };
+                    geoFence: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    geoFenceGroup: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    poi: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    poiCategory: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    deviceMapper: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            edit: boolean;
+                        };
+                    };
+                    users: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    tags: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                            maxAssigningLimit: number;
+                        };
+                    };
+                    rolesAndPrivileges: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                    apiSharing: {
+                        enabled: boolean;
+                        enableControls: boolean;
+                        controls: {
+                            maxCreationLimit: number;
+                        };
+                    };
+                };
             }
 
 
