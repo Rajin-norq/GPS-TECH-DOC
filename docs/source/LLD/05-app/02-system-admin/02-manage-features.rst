@@ -64,16 +64,6 @@
                             _id: ObjectId,
                             name: string,
                             status: string,
-                            is_enabled:boolean,
-                            is_enabled_controls: boolean,
-                            controls:{
-                                max_creation_limit: boolean,  
-                                duration: boolean,
-                                time_limit: boolean,      
-                                edit: boolean,
-                                max_assigning_limit: boolean,
-                            }                                          
-                        
                         },
                     ]
                     current_page: number,
@@ -100,17 +90,6 @@
     * Where system admin clicks on add button from the view features list screen, frontend have to show below fields:
         * Name - (Text field)
         * Status - (Toggle)
-        * Is Enabled - (Toggle)
-            * If isenabled is true the need to show the following  options: 
-
-            * Is Enable Controls - (Toggle)
-                * If isEnableControls true then need to show the below fields
-                * Max Creation Limit - (Toggle)
-                * Duration  - (Toggle)
-                * Time Limit  - (Toggle)
-                * Edit - (Toggle)
-                * Max Assigning Limit - (Toggle)
-
         
     * When Add feature API called, backend perform the below
         * Verify the auth token. For token verification to Refer :ref:`Token_verify`.
@@ -138,16 +117,7 @@
 
                 {
                     name: string,
-                    status: string,
-                    is_enabled:boolean,
-                    is_enabled_controls: boolean,
-                    controls:{
-                        max_creation_limit: boolean,  
-                        duration: boolean,
-                        time_limit: boolean,      
-                        edit: boolean,
-                        max_assigning_limit: boolean,
-                    }  
+                    status: string, 
                 }
 
 
@@ -179,16 +149,6 @@
     * Where system admin clicks on edit button from the actions button in view features list screen, frontend have to show below fields:
         * Name - (Text field)
         * Status - (Toggle)
-        * Is Enabled - (Toggle)
-            * If isenabled is true the need to show the following  options: 
-
-            * Is Enable Controls - (Toggle)
-                * If isEnableControls true then need to show the below fields
-                * Max Creation Limit - (Toggle)
-                * Duration  - (Toggle)
-                * Time Limit  - (Toggle)
-                * Edit - (Toggle)
-                * Max Assigning Limit - (Toggle)
 
         
     * When update feature API called, backend perform the below
@@ -218,16 +178,7 @@
                 {
                     _id: Objectid
                     name: string,
-                    status: string,
-                    is_enabled:boolean,
-                    is_enabled_controls: boolean,
-                    controls:{
-                        max_creation_limit: boolean,  
-                        duration: boolean,
-                        time_limit: boolean,      
-                        edit: boolean,
-                        max_assigning_limit: boolean,
-                    }  
+                    status: string,                    
                 }
 
     
