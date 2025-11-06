@@ -1,4 +1,4 @@
-1. Super Admin
+2. System Admin
 ********************
 
    .. note::
@@ -9,6 +9,8 @@
    .. toctree::
       :maxdepth: 2
 
-      01-manage-subscription
+      01-manage-platform
+      02-manage-features
+      03-manage-super-admin
 
       

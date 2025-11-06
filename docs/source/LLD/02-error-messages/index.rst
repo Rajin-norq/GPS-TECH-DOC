@@ -1,10 +1,20 @@
 02. Error messages
 ********************
 
-   .. note::
+.. _e-10001:
 
-      This project is under active development.
-      
+E-10001: Oops! Something went wrong. Please try later...
 
-   .. toctree::
-      :maxdepth: 2
+.. _e-10002:
+
+E-10002: Token Expired Please Login Again.
+
+.. _e-10003:
+
+E-10003: Invalid Auth Token.
+
+
+
+    
+
+
